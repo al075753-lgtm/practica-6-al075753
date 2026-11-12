@@ -1,0 +1,50 @@
+PROYECTO: CIVILQUANT
+CALCULADORA DE MATERIALES DE CONSTRUCCIÓN
+
+1. PLANTEAMIENTO DEL PROBLEMA
+
+En el área de la ingeniería civil es necesario calcular las cantidades de materiales que se requieren para construir diferentes elementos de concreto. Estos cálculos se realizan a partir de las dimensiones de los elementos y pueden tomar tiempo cuando se hacen manualmente, especialmente si se necesita considerar el desperdicio o varios elementos iguales. Además, un error al introducir las medidas o realizar las operaciones puede afectar la estimación de materiales.
+
+Por esta razón, decidí desarrollar CivilQuant, una aplicación sencilla que me permite calcular el volumen de concreto de distintos elementos constructivos y obtener una estimación de los materiales necesarios. La idea es facilitar los cálculos básicos y presentar los resultados de manera ordenada y fácil de entender.
+
+2. OBJETIVO DEL PROYECTO
+
+Mi objetivo fue crear una aplicación en Python que ayudara a calcular el volumen de concreto para losas, zapatas, columnas y trabes. También busqué que permitiera indicar la cantidad de elementos iguales, agregar un porcentaje de desperdicio y consultar una estimación de cemento, cal hidratada, arena, grava y agua de acuerdo con una resistencia de concreto seleccionada.
+
+3. DESARROLLO DE LA APLICACIÓN
+
+Para realizar el proyecto utilicé Python y la biblioteca Streamlit, que permite mostrar una interfaz en el navegador. Organicé el programa en varios archivos con funciones específicas, de modo que una parte se encargara de calcular volúmenes, otra de aplicar el desperdicio y otra de estimar materiales.
+
+El archivo app.py contiene la interfaz de la aplicación. Los demás archivos de Python contienen funciones para realizar los cálculos y organizar la información. Con esta estructura pude separar las operaciones del diseño de la pantalla y hacer más sencillo el funcionamiento del programa.
+
+4. INSTRUCCIONES PARA UTILIZAR CIVILQUANT
+
+Primero, se debe abrir el proyecto en Visual Studio Code y ejecutar la aplicación con Streamlit. Si Streamlit está instalado en el entorno virtual del proyecto, se puede iniciar desde la terminal con el comando:
+
+    .\.venv\Scripts\python.exe -m streamlit run app.py
+
+Después, se abre la aplicación en el navegador, normalmente en la dirección http://localhost:8501.
+
+Dentro de CivilQuant se siguen estos pasos:
+
+1. Seleccionar el elemento constructivo que se desea calcular: losa, zapata, columna o trabe.
+2. Introducir las dimensiones que solicita la aplicación, expresadas en metros.
+3. Escribir el porcentaje de desperdicio que se desea considerar.
+4. Indicar cuántos elementos iguales se van a calcular.
+5. Seleccionar la resistencia del concreto, expresada en kg/cm², cuando aparezca esa opción.
+6. Presionar el botón de cálculo para obtener los resultados.
+7. Revisar el volumen neto, el volumen con desperdicio y las cantidades estimadas de materiales que muestra la aplicación.
+
+Por ejemplo, si se selecciona una columna con base de 0.30 m, profundidad de 0.30 m y altura de 3.00 m, el volumen de una columna es de 0.27 m³. Si se consideran ocho columnas iguales, el volumen neto total es de 2.16 m³. Al agregar 5 % de desperdicio, el volumen estimado aumenta a 2.268 m³.
+
+5. RESULTADOS Y ALCANCES
+
+La aplicación muestra los resultados de los cálculos de forma clara, incluyendo los volúmenes y una estimación de los materiales. Esto me permite comparar cantidades y comprobar cómo cambian los resultados cuando modifico las dimensiones, el número de elementos o el porcentaje de desperdicio.
+
+Es importante mencionar que las dosificaciones incluidas son referencias didácticas y no corresponden a un diseño de mezcla verificado. Por lo tanto, los resultados de materiales no deben utilizarse directamente para preparar concreto en una obra sin una revisión técnica.
+
+6. CONCLUSIÓN
+
+Con este proyecto pude aplicar lo aprendido en programación a una situación relacionada con mi carrera de Ingeniería Civil. Aprendí a organizar un programa en diferentes archivos, utilizar funciones para realizar operaciones y crear una interfaz en la que el usuario puede introducir datos y consultar resultados.
+
+Considero que CivilQuant es una herramienta útil para practicar cálculos básicos de volúmenes y estimaciones de materiales. También es una base que podría mejorar más adelante, agregando nuevas funciones y verificaciones para realizar cálculos cada vez más completos.
